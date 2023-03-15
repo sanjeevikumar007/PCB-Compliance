@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static', filename='app.css')}}">
+        <title>PCB Complains</title>
+    </head>
+    <body>
+        <h1 style="color: white;">PCB Compliance</h1>
+        <form>
+            <label for="Lead"><strong>Lead</strong> : </label>&emsp;&emsp;&emsp;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;
+            <input type="text" placeholder="Element value in PCB" name="Lead" required><br><br>
+            <label for="Mercury"><strong>Mercury</strong> : </label>&nbsp;&nbsp;&emsp;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;
+            <input type="text" placeholder="Element value in PCB" name="Mercury" required><br><br>
+            <label for="Cd"><strong>Cadmium</strong>: </label>&nbsp;&nbsp;&nbsp;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;
+            <input type="text" placeholder="Element value in PCB" name="Cd" required><br><br>
+            <label for="Hcr"><strong>Hexavalent Chromium</strong> : </label>&nbsp;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;
+            <input type="text" placeholder="Element value in PCB" name="HCr" required><br><br>
+            <label for="PBB"><strong>Polybrominated biphenyls</strong> : </label>&nbsp;&nbsp;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;
+            <input type="text" placeholder="Element value in PCB" name="PBB" required><br><br>
+            <label for="PBDE"><strong>Polybrominated diphenyl ethers</strong> : </label>&nbsp;&nbsp;&emsp13;
+            <input type="text" placeholder="Element value in PCB" name="PBDE" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        {% if session.sent == True%}
+        <a>Mail Has Been Sent</a >
+        {%endif%}
+    </body>
+</html>
